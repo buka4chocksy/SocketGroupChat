@@ -48,3 +48,29 @@ exports.getRoomById = (id)=>{
         })
     })
 }
+
+exports.editRoom = (id , name)=>{
+    return new Promise((resolve , reject )=>{
+        model.findByIdAndUpdate({_id:id},{name:name}).then(updated =>{
+            if(updated){
+                resolve({success:true , message:'room updated successfully'})
+            }else{
+                resolve({success:false , message:'unable to update room !!'})
+            }
+        }).catch(err =>{
+            reject(err);
+        })
+    })
+}
+
+exports.deleteRoom = (id)=>{
+    return new Promise((resolve , reject)=>{
+        model.findByIdAndDelete({_id:id}).then(deleted =>{
+            if(deleted){
+                resolve({success:true , message:'room deleted'})
+            }else{
+                resolve({success:false , message:'could not delete  room '})
+            }
+        }).catch(err => reject(err))
+    })
+}
