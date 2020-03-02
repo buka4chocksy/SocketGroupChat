@@ -10,7 +10,7 @@ var path = require('path');
 var fs = require('fs');
 var http = require('http');
 // var normalizePort = require('normalize-port');
-const initSocket = require("../app/Socket").indexSocket;
+const initSocket = require("../app/socket").indexSocket;
 
 global.activeSocketUsers = []
 /**
