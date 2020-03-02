@@ -4,7 +4,7 @@
   "description": "Its a chat application for people to join and chat built with socket and nodejs",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./bin/www",
+    "start": "node ./bin/www",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "ochoko peter , okoye emmanuel , arthur bosah , oranye nonso , joshua",
