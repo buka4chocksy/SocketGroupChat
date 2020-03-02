@@ -18,4 +18,17 @@ module.exports = function roomController (){
             res.status(200).send(data)
         }).catch(err => res.status(500).send(err))
     }
+
+    
+    this.updateRoomName = (req,res)=>{
+        service.editRoom(req.query.Id , req.body.room).then(data =>{
+            res.status(200).send(data)
+        }).catch(err => res.status(500).send(err))
+    }
+
+    this.deleteRoom = (req,res)=>{
+        service.deleteRoom(req.query.Id).then(data =>{
+            res.status(200).send(data)
+        }).catch(err => res.status(500).send(err))
+    }
 }
